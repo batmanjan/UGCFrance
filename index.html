@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UGC France</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+         /* Custom Styles */
+  body {
+    font-family: 'Lexend', sans-serif;
+    background-color: #f8f9fa;
+    color: #000000;
+    padding-top: 80px; /* Space for fixed navbar */
+  }
+  .home-section {
+    padding: 50px 20px;
+  }
+  .home-image {
+    width: 300px; /* Adjusted size for better responsiveness */
+    height: 300px;
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0 0 40px rgba(4, 0, 219, 0.6); /* Shadow effect */
+    object-fit: cover;
+    margin-bottom: 20px; /* Space between image and text on smaller screens */
+  }
+  .home-text {
+    text-align: left; /* Align text to the left on larger screens */
+  }
+  .home-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  .home-subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #7573e1;
+  }
+  .home-description {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #000000;
+  }
+  /* Media Query for Mobile View */
+  @media (max-width: 768px) {
+    .home-section {
+      text-align: center;
+    }
+    .home-image {
+      width: 250px;
+      height: 250px;
+    }
+    .home-text {
+      text-align: center; /* Center text on smaller screens */
+    }
+  }
+
+          .collabs-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            overflow: hidden;
+          }
+          .brands-carousel {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+          }
+          .brands-track {
+            display: flex;
+            gap: 20px;
+            animation: scroll 20s linear infinite;
+          }
+          .brand-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%; /* Makes the images circular */
+          }
+          @keyframes scroll {
+            from {
+              transform: translateX(0);
+            }
+            to {
+              transform: translateX(-50%);
+            }
+          }
+        
+          .portfolio-videos-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            display: flex;
+            justify-content: center; /* Center the grid horizontally */
+            align-items: center; /* Center the content vertically, if needed */
+          }
+          
+          .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+            gap: 15px; /* Space between videos */
+            max-width: 1000px; /* Set a max width for the grid */
+            width: 100%; /* Ensure the grid takes full width up to the max width */
+            margin: 0 auto; /* Center the grid within the section */
+          }
+          
+          
+          .tiktok-embed {
+            background-color: transparent !important; /* Force transparent background */
+            border: none !important; /* Remove border */
+            box-shadow: none !important; /* Remove shadow */
+            margin: 0 !important; /* Remove any margin */
+            padding: 0 !important; /* Remove any padding */
+            width: 100% !important; /* Make each TikTok video take the full width of its container */
+            height: auto !important; /* Maintain aspect ratio */
+          }
+          
+          iframe {
+            background-color: transparent !important; /* Force iframe background to be transparent */
+            border: none; /* Remove border from the iframe */
+          }
+          
+          
+          
+          
+      </style>
+    </head>
+    <body id="top">
+      <!-- Navbar -->
+<nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-4" href="#">UGC France</a>
+      <button class="navbar-toggler me-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Hi! I'm UGC Francine</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" href="#top">Home</a> <!-- Points to home section -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#collabs">Collabs</a> <!-- Points to collabs section -->
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Portfolio
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
+                <li><a class="dropdown-item" href="#videos">Videos</a></li> <!-- Points to videos section -->
+                <li><a class="dropdown-item" href="#photography">Photography</a></li> <!-- Points to photography section -->
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#analytics">Analytics</a> <!-- Points to analytics section -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a> <!-- Points to contact section -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#price">Price</a> <!-- Points to price section -->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  
+      <!-- Home Section -->
+<section id="home" class="home-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Image Section -->
+        <div class="col-12 col-md-6 order-1 order-md-2 text-center">
+          <img src="images/home1.png" alt="Profile Picture" class="home-image">
+        </div>
+        <!-- Text Section -->
+        <div class="col-12 col-md-6 order-2 order-md-1 home-text">
+          <h1 class="home-title">Hi, It's <span class="home-subtitle">France</span></h1>
+          <h2 class="home-subtitle">I'm a UGC Creator</h2>
+          <p class="home-description">
+            Hi there! I’m Francines, a passionate UGC Content Creator dedicated to helping brands connect authentically with their audiences. I specialize in producing engaging and relatable content that brings your products and stories to life.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+     <!-- Collabs Section -->
+<section id="collabs" class="collabs-section my-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Brands I've Worked With</h2>
+      <div class="brands-carousel">
+        <div class="brands-track">
+          <!-- Original Images -->
+          <img src="images/brand1.png" class="brand-logo" alt="Brand 1">
+          <img src="images/brand2.png" class="brand-logo" alt="Brand 2">
+          <img src="images/brand3.png" class="brand-logo" alt="Brand 3">
+          <img src="images/brand4.png" class="brand-logo" alt="Brand 4">
+          <img src="images/brand5.png" class="brand-logo" alt="Brand 5">
+          <img src="images/brand6.png" class="brand-logo" alt="Brand 6">
+          <img src="images/brand7.png" class="brand-logo" alt="Brand 7">
+          <img src="images/brand8.png" class="brand-logo" alt="Brand 8">
+          <!-- Duplicate Images for Seamless Scrolling -->
+          <img src="images/brand1.png" class="brand-logo" alt="Brand 1">
+          <img src="images/brand2.png" class="brand-logo" alt="Brand 2">
+          <img src="images/brand3.png" class="brand-logo" alt="Brand 3">
+          <img src="images/brand4.png" class="brand-logo" alt="Brand 4">
+          <img src="images/brand5.png" class="brand-logo" alt="Brand 5">
+          <img src="images/brand6.png" class="brand-logo" alt="Brand 6">
+          <img src="images/brand7.png" class="brand-logo" alt="Brand 7">
+          <img src="images/brand8.png" class="brand-logo" alt="Brand 8">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Videos Section -->
+<section id="videos" class="portfolio-videos-section my-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Portfolio Videos</h2>
+      <div class="videos-grid">
+          
+          <!-- Add 7 more TikTok video blocks in the same format -->
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@onlyfrance__/video/7350690934411005190" data-video-id="7350690934411005190" style="max-width: 605px;min-width: 325px;" > 
+            <section> 
+                <a target="_blank" title="@onlyfrance__" href="https://www.tiktok.com/@onlyfrance__?refer=embed">@onlyfrance__</a> these affordable lip glazes by herorange will definitely be your next go-to lippies! 💋 . . . <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a title="foryou" target="_blank" href="https://www.tiktok.com/tag/foryou?refer=embed">#foryou</a> <a title="lippie" target="_blank" href="https://www.tiktok.com/tag/lippie?refer=embed">#lippie</a> <a title="lipgloss" target="_blank" href="https://www.tiktok.com/tag/lipgloss?refer=embed">#lipgloss</a> <a title="lipglaze" target="_blank" href="https://www.tiktok.com/tag/lipglaze?refer=embed">#lipglaze</a> <a title="ugc" target="_blank" href="https://www.tiktok.com/tag/ugc?refer=embed">#UGC</a> <a title="makeup" target="_blank" href="https://www.tiktok.com/tag/makeup?refer=embed">#makeup</a> <a title="budolfinds" target="_blank" href="https://www.tiktok.com/tag/budolfinds?refer=embed">#budolfinds</a> <a target="_blank" title="♬ original sound - 𝜗𝜚 irohalogy" href="https://www.tiktok.com/music/original-sound-7346967074202487584?refer=embed">♬ original sound - 𝜗𝜚 irohalogy</a> 
+            </section> 
+        </blockquote>
+
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@onlyfrance__/video/7418751644428422418" data-video-id="7418751644428422418" style="max-width: 605px;min-width: 325px;" >
+             <section> 
+                <a target="_blank" title="@onlyfrance__" href="https://www.tiktok.com/@onlyfrance__?refer=embed">@onlyfrance__</a> slayable bag? check the yellow basket! <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a title="foryou" target="_blank" href="https://www.tiktok.com/tag/foryou?refer=embed">#foryou</a> <a title="cloudbag" target="_blank" href="https://www.tiktok.com/tag/cloudbag?refer=embed">#cloudbag</a> <a title="univ" target="_blank" href="https://www.tiktok.com/tag/univ?refer=embed">#univ</a> <a title="schoollife" target="_blank" href="https://www.tiktok.com/tag/schoollife?refer=embed">#schoollife</a> <a target="_blank" title="♬ my lips like sugarrrrrrr - keize" href="https://www.tiktok.com/music/my-lips-like-sugarrrrrrr-7140877019612449562?refer=embed">♬ my lips like sugarrrrrrr - keize</a> 
+            </section> 
+          </blockquote>
+
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@onlyfrance__/video/7380946014238215429" data-video-id="7380946014238215429" style="max-width: 605px;min-width: 325px;" > 
+            <section> 
+                <a target="_blank" title="@onlyfrance__" href="https://www.tiktok.com/@onlyfrance__?refer=embed">@onlyfrance__</a> 9 pesos na lang😩🩷 <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a title="foryou" target="_blank" href="https://www.tiktok.com/tag/foryou?refer=embed">#foryou</a> <a title="iphonecase" target="_blank" href="https://www.tiktok.com/tag/iphonecase?refer=embed">#iphonecase</a> <a title="budolfinds" target="_blank" href="https://www.tiktok.com/tag/budolfinds?refer=embed">#budolfinds</a> <a title="phonecase" target="_blank" href="https://www.tiktok.com/tag/phonecase?refer=embed">#phonecase</a> <a target="_blank" title="♬ original sound - ⊹ ࣪ ˖ 𝙿𝚊𝚛𝚒𝚜♡ - ⊹ ࣪ ˖ Paris | UGC♡" href="https://www.tiktok.com/music/original-sound-⊹-࣪-˖-𝙿𝚊𝚛𝚒𝚜♡-7380946217487338245?refer=embed">♬ original sound - ⊹ ࣪ ˖ 𝙿𝚊𝚛𝚒𝚜♡ - ⊹ ࣪ ˖ Paris | UGC♡</a> 
+            </section>
+         </blockquote>
+
+         <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@onlyfrance__/video/7431818161428630802" data-video-id="7431818161428630802" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@onlyfrance__" href="https://www.tiktok.com/@onlyfrance__?refer=embed">@onlyfrance__</a> loving my new smart watch!! grab yours now 🩷 | <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a title="foryou" target="_blank" href="https://www.tiktok.com/tag/foryou?refer=embed">#foryou</a> <a title="smartwatch" target="_blank" href="https://www.tiktok.com/tag/smartwatch?refer=embed">#smartwatch</a> <a title="pink" target="_blank" href="https://www.tiktok.com/tag/pink?refer=embed">#pink</a> <a title="essential" target="_blank" href="https://www.tiktok.com/tag/essential?refer=embed">#essential</a> <a title="budolfinds" target="_blank" href="https://www.tiktok.com/tag/budolfinds?refer=embed">#budolfinds</a> <a title="cute" target="_blank" href="https://www.tiktok.com/tag/cute?refer=embed">#cute</a> <a title="ugc" target="_blank" href="https://www.tiktok.com/tag/ugc?refer=embed">#ugc</a> <a title="ugccreator" target="_blank" href="https://www.tiktok.com/tag/ugccreator?refer=embed">#ugccreator</a> <a target="_blank" title="♬ b r e a d - -✦Tiaa ໒꒰ྀིᵔ ᵕ ᵔ ꒱ྀི১" href="https://www.tiktok.com/music/b-r-e-a-d-7384248931689696006?refer=embed">♬ b r e a d - -✦Tiaa ໒꒰ྀིᵔ ᵕ ᵔ ꒱ྀི১</a> </section> </blockquote>
+
+         <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@onlyfrance__/video/7431393478468209938" data-video-id="7431393478468209938" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@onlyfrance__" href="https://www.tiktok.com/@onlyfrance__?refer=embed">@onlyfrance__</a> cutie labubu 💗 | <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a title="foryou" target="_blank" href="https://www.tiktok.com/tag/foryou?refer=embed">#foryou</a> <a title="ugc" target="_blank" href="https://www.tiktok.com/tag/ugc?refer=embed">#ugc</a> <a title="pink" target="_blank" href="https://www.tiktok.com/tag/pink?refer=embed">#pink</a> <a title="labubu" target="_blank" href="https://www.tiktok.com/tag/labubu?refer=embed">#labubu</a> <a title="phonecase" target="_blank" href="https://www.tiktok.com/tag/phonecase?refer=embed">#phonecase</a> <a title="cute" target="_blank" href="https://www.tiktok.com/tag/cute?refer=embed">#cute</a> <a target="_blank" title="♬ blu - Zachz Winner" href="https://www.tiktok.com/music/blu-7376859394087799557?refer=embed">♬ blu - Zachz Winner</a> </section> </blockquote>
+
+         <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@onlyfrance__/video/7431148454895766802" data-video-id="7431148454895766802" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@onlyfrance__" href="https://www.tiktok.com/@onlyfrance__?refer=embed">@onlyfrance__</a> Smart Watch for only 270 pesos!! | <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a title="foruyou" target="_blank" href="https://www.tiktok.com/tag/foruyou?refer=embed">#foruyou</a> <a title="smartwatch" target="_blank" href="https://www.tiktok.com/tag/smartwatch?refer=embed">#smartwatch</a> <a title="budolfinds" target="_blank" href="https://www.tiktok.com/tag/budolfinds?refer=embed">#budolfinds</a> <a title="affordable" target="_blank" href="https://www.tiktok.com/tag/affordable?refer=embed">#affordable</a> <a title="pink" target="_blank" href="https://www.tiktok.com/tag/pink?refer=embed">#pink</a> <a target="_blank" title="♬ original sound - Audios ☆" href="https://www.tiktok.com/music/original-sound-7245983801519033090?refer=embed">♬ original sound - Audios ☆</a> </section> </blockquote>
+
+       
+
+
+          
+        
+      </div>
+    </div>
+  </section>
+
+
+    <!-- TikTok Embed Script -->
+    <script async src="https://www.tiktok.com/embed.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+    // Select all nav links that are NOT the dropdown toggle
+  const navLinks = document.querySelectorAll('.offcanvas-body .nav-link:not(.dropdown-toggle), .dropdown-menu .dropdown-item');
+  const offcanvasNavbar = document.querySelector('#offcanvasNavbar');
+
+  // Loop through each link and add a click event
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      // Create a new Bootstrap Offcanvas instance and hide it
+      const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasNavbar);
+      if (offcanvasInstance) {
+        offcanvasInstance.hide();
+      }
+    });
+  });
+
+
+</script>  
+</body>
+ 
+</html>
